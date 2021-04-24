@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.c2501.backend.dao.MenuInfoDao">
+
+	<select id="list" resultType="com.c2501.backend.model.MenuInfo">
+		SELECT * FROM db_backend.t_menu_info;
+	</select>
+	
+	<select id="findAll" resultType="com.c2501.backend.model.MenuInfo">
+		select deptno,dname,db_source from dept;
+	</select>
+	<insert id="addDept" parameterType="com.c2501.backend.model.MenuInfo">
+		INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());
+	</insert>
+
+</mapper>
+ 
+
