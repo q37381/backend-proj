@@ -4,14 +4,14 @@
 
 <mapper namespace="com.c2501.backend.dao.MenuInfoDao">
 
-	<select id="list" resultType="com.c2501.backend.model.MenuInfo">
+	<select id="list" resultType="com.c2501.backend.po.MenuInfoPO">
 		SELECT * FROM db_backend.t_menu_info;
 	</select>
 	
-	<select id="findAll" resultType="com.c2501.backend.model.MenuInfo">
+	<select id="findAll" resultType="com.c2501.backend.po.MenuInfoPO">
 		select deptno,dname,db_source from dept;
 	</select>
-	<insert id="addDept" parameterType="com.c2501.backend.model.MenuInfo">
+	<insert id="addDept" parameterType="com.c2501.backend.po.MenuInfoPO">
 		INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());
 	</insert>
 

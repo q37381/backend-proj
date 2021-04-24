@@ -25,8 +25,10 @@ public class MenuInfoController {
     public Map<String, Object> list(Integer ii) {
         List<MenuInfoVO> list = menuInfoService.list();
         // 测试报错
+        if (ii != null) {
         @SuppressWarnings("unused")
         int i = 1 / ii;
+        }
         return getReturnMenuMap(list);
     }
 
