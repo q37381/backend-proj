@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.druid.util.StringUtils;
-import com.common.service.SqlGenerateService;
 import com.common.util.SQLToJavaFieldUtil;
 
 @RestController
@@ -13,7 +12,7 @@ import com.common.util.SQLToJavaFieldUtil;
 public class SQLGenerateController {
 
     // TODOM 后期改成接口调用
-    private SqlGenerateService sqlGenerateService = new SqlGenerateService();
+    private com.common.controller.SQLGenerateController sqlGenerateService = new com.common.controller.SQLGenerateController();
 
     @PostMapping("/toJava")
     public String sqlToJava(String sql) {
@@ -31,6 +30,6 @@ public class SQLGenerateController {
             return null;
         }
 
-        return sqlGenerateService.generateSqlByWord(word);
+        return sqlGenerateService.generateSQL(word);
     }
 }
