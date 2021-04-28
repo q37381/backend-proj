@@ -13,5 +13,6 @@
 			<groupId>com.2501.backend</groupId>
 			<artifactId>backend-model</artifactId>
 		</dependency>
+
 	</dependencies>
 </project>

@@ -4,8 +4,9 @@ import java.util.List;
 
 import com.c2501.backend.model.MenuInfoVO;
 
+//@FeignClient
 public interface MenuInfoClientService {
 
-    public List<MenuInfoVO> list();
+    List<MenuInfoVO> list();
 
 }

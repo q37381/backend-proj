@@ -25,8 +25,8 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
-      #defaultZone: http://localhost:7001/eureka
-       defaultZone: http://2501eureka.com:7001/eureka/,http://2501eureka.com:7002/eureka/,http://2501eureka.com:7003/eureka/      
+      defaultZone: http://2501eureka.com:7001/eureka
+       #defaultZone: http://2501eureka.com:7001/eureka/,http://2501eureka.com:7002/eureka/,http://2501eureka.com:7003/eureka/      
   instance:
     instance-id: backend-provider8001
     prefer-ip-address: true     #访问路径可以显示IP地址     
@@ -34,4 +34,3 @@ eureka:
 info: 
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-

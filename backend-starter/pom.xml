@@ -11,9 +11,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
@@ -29,6 +34,10 @@
 		<dependency>
 			<groupId>com.2501.backend</groupId>
 			<artifactId>backend-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.2501.sql</groupId>
+			<artifactId>sql-handle-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.2501.component</groupId>

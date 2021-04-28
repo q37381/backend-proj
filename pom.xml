@@ -40,10 +40,10 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-                <groupId>com.2501.backend</groupId>
-                <artifactId>backend-model</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+				<groupId>com.2501.backend</groupId>
+				<artifactId>backend-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -73,11 +73,6 @@
 			<artifactId>fastjson</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.2501.common</groupId>
-			<artifactId>sql-util</artifactId>
-			<version>${c2501.common.util.version}</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
 			<groupId>com.google.guava</groupId>

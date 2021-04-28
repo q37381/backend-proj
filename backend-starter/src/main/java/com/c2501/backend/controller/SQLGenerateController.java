@@ -1,18 +1,19 @@
 package com.c2501.backend.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.druid.util.StringUtils;
-import com.common.util.SQLToJavaFieldUtil;
+import com.c2501.sql.SQLHandleClientService;
 
 @RestController
 @RequestMapping("sqlGenerate")
 public class SQLGenerateController {
 
-    // TODOM 后期改成接口调用
-    private com.common.controller.SQLGenerateController sqlGenerateService = new com.common.controller.SQLGenerateController();
+    @Autowired
+    private SQLHandleClientService SQLHandleClientService;
 
     @PostMapping("/toJava")
     public String sqlToJava(String sql) {
@@ -20,7 +21,7 @@ public class SQLGenerateController {
             return null;
         }
 
-        return SQLToJavaFieldUtil.getJavaFieldStr(sql);
+        return SQLHandleClientService.toJavaBean(sql);
 
     }
 
@@ -30,6 +31,6 @@ public class SQLGenerateController {
             return null;
         }
 
-        return sqlGenerateService.generateSQL(word);
+        return SQLHandleClientService.generateSQL(word);
     }
 }
