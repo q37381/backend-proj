@@ -3,15 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.7.RELEASE</version>
-	</parent>
-
 	<groupId>com.2501.backend</groupId>
 	<artifactId>backend-proj</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${project.version}</version>
 	<packaging>pom</packaging>
 
 	<modules>
@@ -22,7 +16,7 @@
 
 	<properties>
 		<c2501.common.util.version>0.0.1-SNAPSHOT</c2501.common.util.version>
-		<project.version>0.0.1-SNAPSHOT</project.version>
+		<project.version>1.0.0-SNAPSHOT</project.version>
 	</properties>
 
 	<dependencyManagement>

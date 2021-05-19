@@ -5,7 +5,8 @@
 	<parent>
 		<groupId>com.2501.backend</groupId>
 		<artifactId>backend-proj</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${project.version}</version>
+		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>backend-starter</artifactId>
 
